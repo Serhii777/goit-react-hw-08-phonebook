@@ -1,4 +1,6 @@
 .mainTitle {
-    margin-bottom: 30px;
-    color: rgb(54, 69, 171);
-  }
+  font-size: 46px;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #3645ab;
+}

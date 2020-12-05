@@ -1,0 +1,32 @@
+.navigationList {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  text-transform: uppercase;
+  list-style: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.link {
+  text-decoration: none;
+  color: #ffffff;
+  margin-right: 20px;
+}
+
+.link:hover {
+  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.7);
+}
+
+.link:last-child {
+  margin-right: 0px;
+}
+
+.activelink {
+  color: #f9fd05;
+}
+
+.activelink:hover {
+  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.2);
+}

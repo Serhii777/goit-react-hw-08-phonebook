@@ -9,14 +9,15 @@ const Alert = ({ newContactUnique, timeout }) => {
   return (
     <div className={stylesAlert.alertWrapper}>
       <p className={stylesAlert.alertText}>
-        This {newContactUnique} is already exist!
+        This <span className={stylesAlert.alertName}>{newContactUnique}</span>{" "}
+        is already exist!
       </p>
     </div>
   );
 };
 
 Alert.propTypes = {
-  newContactUnique: (PropTypes.bool, PropTypes.object),
+  newContactUnique: (PropTypes.string, PropTypes.bool),
 };
 
 Alert.defaultProps = {

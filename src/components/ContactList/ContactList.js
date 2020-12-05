@@ -3,13 +3,17 @@ import PropTypes from "prop-types";
 
 import ContactListItem from "./ContactListItemContainer";
 
+
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styles from "./ContactList.module.css";
 import contactFade from "../Animation/ContactFade.module.css";
 
 const ContactList = ({ contacts }) => {
   return (
-    <div className={styles.contactWrapper}>
+    <div className={styles.contactListWrapper}>
+        <h2 className={styles.contactListTitle}>List of your contacts</h2>
+
+
       <TransitionGroup component="ul" className={styles.contactList}>
         {contacts.map(({ id }) => (
           <CSSTransition key={id} timeout={250} classNames={contactFade}>

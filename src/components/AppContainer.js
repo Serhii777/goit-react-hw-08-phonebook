@@ -2,12 +2,11 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import App from "./App";
-import contactActions from "../redux/contacts/contactsActions";
-import contactsOperations from "../redux/contacts/contactsOperations";
+import { authOperations } from "../redux/auth";
 
 class AppContainer extends Component {
   componentDidMount() {
-    this.props.onFetchContacts();
+    this.props.onGetCurrentUser();
   }
 
   render() {
@@ -15,16 +14,8 @@ class AppContainer extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    newContactUnique: state.contacts.newContactUnique,
-    loadingContacts: state.contacts.loading,
-  };
-};
-
 const mapDispatchToProps = {
-  onFetchContacts: contactsOperations.fetchContacts,
-  onResetNewContactUnique: contactActions.resetNewContactUnique,
+  onGetCurrentUser: authOperations.getCurrentUser,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AppContainer);
+export default connect(null, mapDispatchToProps)(AppContainer);

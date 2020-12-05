@@ -6,8 +6,10 @@ import styles from "./ContactList.module.css";
 const ContactListItem = ({ name, number, onRemoveContact }) => {
   return (
     <li className={styles.contactItem}>
-      <p className={styles.contactName}>{name}:</p>
-      <span className={styles.contactNumber}>{number}</span>
+      <div className={styles.contactDetails}>
+        <p className={styles.contactName}>{name}:</p>
+        <span className={styles.contactNumber}>{number}</span>
+      </div>
       <button
         type="button"
         className={styles.contactButton}
@@ -21,6 +23,7 @@ const ContactListItem = ({ name, number, onRemoveContact }) => {
 ContactListItem.propTypes = {
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
+  onRemoveContact: PropTypes.func,
 };
 
 ContactListItem.defaultProps = {

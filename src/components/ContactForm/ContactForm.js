@@ -44,36 +44,40 @@ class ContactForm extends Component {
 
   render() {
     return (
-      <form className={styles.form} onSubmit={this.handleSubmit}>
-        <label className={styles.formLabel}>
-          Name
-          <input
-            className={styles.formInput}
-            type="text"
-            name="name"
-            value={this.state.name}
-            onChange={this.handleChange}
-            placeholder="Annie Copeland"
-            required
-          />
-        </label>
-        <label className={styles.formLabel}>
-          Number
-          <input
-            className={styles.formInput}
-            type="text"
-            name="number"
-            value={this.state.number}
-            onChange={this.handleChange}
-            placeholder="227-91-26"
-            required
-          />
-        </label>
+      <div className={styles.formWrapper}>
+        <h2 className={styles.formTitle}>Enter your contact details</h2>
 
-        <button type="submit" className={styles.formButton}>
-          Add contact
-        </button>
-      </form>
+        <form className={styles.form} onSubmit={this.handleSubmit}>
+          <label className={styles.formLabel}>
+            Name
+            <input
+              className={styles.formInput}
+              type="text"
+              name="name"
+              value={this.state.name}
+              onChange={this.handleChange}
+              placeholder="Annie Copeland"
+              required
+            />
+          </label>
+          <label className={styles.formLabel}>
+            Number
+            <input
+              className={styles.formInput}
+              type="text"
+              name="number"
+              value={this.state.number}
+              onChange={this.handleChange}
+              placeholder="227-91-26"
+              required
+            />
+          </label>
+
+          <button type="submit" className={styles.formButton}>
+            Add contact
+          </button>
+        </form>
+      </div>
     );
   }
 }
@@ -82,7 +86,9 @@ ContactForm.propTypes = {
   contacts: PropTypes.arrayOf(PropTypes.object),
   name: PropTypes.string,
   number: PropTypes.string,
-  newContactUnique: (PropTypes.bool, PropTypes.object),
+  newContactUnique: (PropTypes.object, PropTypes.bool),
+  onAddContact: PropTypes.func,
+  onIsNewContactUnique: PropTypes.func,
 };
 
 ContactForm.defaultProps = {

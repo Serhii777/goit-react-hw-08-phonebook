@@ -60,11 +60,3 @@ export default combineReducers({
   filter,
   loading,
 });
-
-// const initialState = {
-//   contacts: {
-//     contactList: [],
-//     newContactUnique: false,
-//     filter: "",
-//   },
-// };

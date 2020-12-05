@@ -1,0 +1,67 @@
+.userMenuWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 18px;
+}
+
+.userImageWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0px 20px 10px 0px;
+}
+
+.userMenuAvatar {
+  margin-right: 14px;
+}
+
+.userMenuText {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.userMenuName {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e6ff07;
+}
+
+.userMenuButton {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 2px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #2b81fa;
+  color: #ffffff;
+  box-shadow: 2px 3px 8px 2px rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+  transition: all 200ms ease-in-out;
+  margin: 0px auto 6px;
+}
+
+.userMenuButton:hover {
+  background-color: #314aee;
+  box-shadow: 2px 3prgb (56, 80, 238) px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 640px) {
+  .userMenuWrapper {
+    justify-content: flex-start;
+  }
+
+  .userImageWrapper {
+    justify-content: flex-start;
+    margin: 0px 20px 0px 0px;
+  }
+
+  .userMenuButton {
+    margin: 0px auto 0px;
+  }
+}

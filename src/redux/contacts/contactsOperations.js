@@ -1,8 +1,12 @@
 import axios from "axios";
 import contactsActions from "./contactsActions";
 
-axios.defaults.baseURL = "http://localhost:2990";
+axios.defaults.baseURL =
+  "https://goit-phonebook-api.herokuapp.com/";
 
+axios.defaults.headers.post["Content-Type"] = "application/json";
+
+ 
 const addContact = ({ name, number }) => (dispatch) => {
   dispatch(contactsActions.addContactRequest());
 
@@ -23,9 +27,9 @@ const fetchContacts = () => (dispatch) => {
 
 const removeContact = (id) => (dispatch) => {
   dispatch(contactsActions.removeContactRequest());
-
+  console.log(id);
   axios
-    .delete(`/contacts/${id}`)
+    .delete(`/contacts/${id}`, )
     .then(() => dispatch(contactsActions.removeContactSuccess(id)))
     .catch((error) => dispatch(contactsActions.removeContactError(error)));
 };

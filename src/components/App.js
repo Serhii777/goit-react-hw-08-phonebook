@@ -1,59 +1,37 @@
-import React from "react";
+import React, { Suspense } from "react";
+import { BrowserRouter, Switch } from "react-router-dom";
 import PropTypes from "prop-types";
 
-import Container from "./Container";
-import MainTitle from "./MainTitle/MainTitle";
-import Filter from "./Filter/Filter.container";
-import ContactForm from "./ContactForm/ContactForm.container";
-import ContactList from "./ContactList/ContactList.container";
-import Alert from "./Alert/Alert";
+import Spinner from "./Spinner";
+import Layout from "./Layout";
+import routes from "../routes";
 
-import styles from "./Container/Container.module.css";
-import { CSSTransition } from "react-transition-group";
-import fadeAlert from "./Animation/FadeAlert.module.css";
-import fadeItems from "./Animation/FadeItems.module.css";
+import PrivateRoute from "./Routes/PrivateRoute";
+import PublicRoute from "./Routes/PublicRoute";
 
-const App = ({
-  newContactUnique,
-  loadingContacts,
-  onResetNewContactUnique,
-}) => {
+const App = () => {
   return (
-    <Container>
-      {loadingContacts && <h2>Loading...</h2>}
-      <MainTitle />
-      <ContactForm />
-
-      <CSSTransition
-        in={newContactUnique}
-        appear
-        timeout={300}
-        classNames={fadeAlert}
-        unmountOnExit>
-        <Alert
-          newContactUnique={newContactUnique.name}
-          timeout={onResetNewContactUnique}
-        />
-      </CSSTransition>
-
-      <h2 className={styles.containerTitle}>Contacts</h2>
-
-      <Filter />
-
-      <CSSTransition
-        in={true}
-        timeout={300}
-        classNames={fadeItems}
-        unmountOnExit>
-        <ContactList />
-      </CSSTransition>
-    </Container>
+    <BrowserRouter>
+      <Layout>
+        <Suspense fallback={<Spinner />}>
+          <Switch>
+            {routes.map((route) =>
+              route.private ? (
+                <PrivateRoute key={route.label} {...route} />
+              ) : (
+                <PublicRoute key={route.label} {...route} />
+              )
+            )}
+          </Switch>
+        </Suspense>
+      </Layout>
+    </BrowserRouter>
   );
 };
 
 App.propTypes = {
   contacts: PropTypes.arrayOf(PropTypes.object),
-  newContactUnique: (PropTypes.bool, PropTypes.object),
+  onResetNewContactUnique: PropTypes.func,
 };
 
 App.defaultProps = {

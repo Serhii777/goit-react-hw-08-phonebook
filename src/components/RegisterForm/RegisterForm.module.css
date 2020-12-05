@@ -1,0 +1,63 @@
+.registerWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.registerTitle {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #1762bd;
+  text-align: center;
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.registerLabel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.registerText {
+  margin-right: 20px;
+  min-width: 80px;
+}
+
+.registerInput {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  width: 100%;
+  padding: 6px 10px;
+}
+
+.registerButton {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  color: #ffffff;
+  background-color: #2b81fa;
+  border: 0;
+  outline: 0;
+  padding: 6px 50px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 2px 3px 8px 2px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  user-select: none;
+  transition: all 200ms ease-in-out;
+  margin: 0px auto 30px;
+}
+
+.registerButton:hover {
+  background-color: #314aee;
+}

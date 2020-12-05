@@ -1,0 +1,53 @@
+.homeWrapper{
+text-align: center;
+padding: 14px;
+}
+
+.homeTitle{
+margin-bottom: 20px;
+color: #1c32c2;
+}
+
+.homeDescriptionWrapper{
+margin-bottom: 50px;
+}
+
+.titleDescription{
+margin-bottom: 20px;
+color: #987810;
+}
+
+.titleDescriptionColor{
+color: #2b3ebf;
+}
+
+.homeText{
+margin-bottom: 30px;
+}
+
+.homeLink{
+}
+
+
+.homeButton {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    align-items: center;
+    color: #ffffff;
+    background-color: #2b81fa;
+    border: 0;
+    outline: 0;
+    padding: 6px 50px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 2px 3px 8px 2px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    user-select: none;
+    transition: all 200ms ease-in-out;
+    margin: 0px auto 30px;
+  }
+  
+  .homeButton:hover {
+    background-color: #314aee;
+  }
