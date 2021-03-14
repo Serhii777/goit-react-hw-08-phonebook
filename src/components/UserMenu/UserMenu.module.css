@@ -28,17 +28,25 @@
 .userMenuName {
   font-size: 20px;
   font-weight: 600;
-  color: #e6ff07;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-style: italic;
+  text-decoration: underline;
+  text-shadow: 0px 0px 10px rgb(6, 78, 69);
+
 }
 
 .userMenuButton {
+  outline: 0;
+  border: none;
   font-family: Roboto, sans-serif;
   font-size: 16px;
-  font-weight: 500;
   padding: 2px 24px;
+  font-weight: 500;
   border-radius: 4px;
   cursor: pointer;
-  background-color: #2b81fa;
+  border: 1px solid #4e5a57;
+  background-color: #586c67;
   color: #ffffff;
   box-shadow: 2px 3px 8px 2px rgba(0, 0, 0, 0.4);
   text-transform: uppercase;
@@ -47,8 +55,10 @@
 }
 
 .userMenuButton:hover {
-  background-color: #314aee;
-  box-shadow: 2px 3prgb (56, 80, 238) px rgba(0, 0, 0, 0.5);
+  background-color: #c1ddd7;
+  color: #333d3a;
+  font-weight: 700;
+  box-shadow: 2px 3px 8px 2px rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (min-width: 640px) {

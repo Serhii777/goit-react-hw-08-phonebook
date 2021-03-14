@@ -6,7 +6,7 @@
 .registerTitle {
   font-size: 24px;
   margin-bottom: 30px;
-  color: #1762bd;
+  color: #3c3e58;
   text-align: center;
 }
 
@@ -39,15 +39,16 @@
 }
 
 .registerButton {
+  outline: 0;
+  border: none;
   font-family: Roboto, sans-serif;
   font-size: 16px;
   font-weight: 500;
   display: inline-flex;
   align-items: center;
+  border: 1px solid #4e5a57;
+  background-color: #6d807c;
   color: #ffffff;
-  background-color: #2b81fa;
-  border: 0;
-  outline: 0;
   padding: 6px 50px;
   border-radius: 4px;
   cursor: pointer;
@@ -59,5 +60,7 @@
 }
 
 .registerButton:hover {
-  background-color: #314aee;
+  background-color: #c1ddd7;
+  color: #333d3a;
+  box-shadow: 2px 3px 8px 2px rgba(0, 0, 0, 0.5);
 }

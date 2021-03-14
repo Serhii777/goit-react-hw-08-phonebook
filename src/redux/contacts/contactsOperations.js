@@ -27,7 +27,6 @@ const fetchContacts = () => (dispatch) => {
  
 const removeContact = (id) => (dispatch) => {
   dispatch(contactsActions.removeContactRequest());
-  console.log(id);
   axios
     .delete(`/contacts/${id}`, )
     .then(() => dispatch(contactsActions.removeContactSuccess(id)))

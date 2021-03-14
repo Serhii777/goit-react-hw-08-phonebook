@@ -6,7 +6,7 @@
 .formTitle {
   font-size: 24px;
   margin-bottom: 20px;
-  color: #1762bd;
+  color: #3c3e58;
   text-align: center;
 }
 
@@ -19,7 +19,7 @@
   box-shadow: 2px 2px 4px 2px rgba(32, 18, 18, 0.4);
   border-radius: 4px;
   font-size: 18px;
-  background-color: #e2f5fa;
+  background-color: #deeeeb;
 }
 
 .formLabel {
@@ -36,14 +36,16 @@
 }
 
 .formButton {
+  outline: none;
+  border: none;
   width: fit-content;
   font-size: 16px;
   font-family: Roboto, sans-serif;
   padding: 6px 50px;
   border-radius: 4px;
   cursor: pointer;
-  /* background-color: #374bd0; */
-  background-color: #2b81fa;
+  border: 1px solid #3a4442;
+  background-color: #6d807c;
   color: #ffffff;
   box-shadow: 2px 3px 8px 2px rgba(0, 0, 0, 0.4);
   text-transform: uppercase;
@@ -52,7 +54,7 @@
 }
 
 .formButton:hover {
- background-color: #314aee;
-  ;
+  background-color: #abc7c1;
+  color: #333d3a;
   box-shadow: 2px 3px 8px 2px rgba(0, 0, 0, 0.5);
 }

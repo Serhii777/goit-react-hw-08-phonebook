@@ -11,7 +11,7 @@
 .contactListTitle {
   font-size: 24px;
   margin-bottom: 20px;
-  color: #1762bd;
+  color: #3c3e58;
   text-align: center;
 }
 
@@ -30,7 +30,7 @@
   box-shadow: 2px 2px 4px 2px rgba(32, 18, 18, 0.4);
   padding: 10px;
   border-radius: 4px;
-  background-color: #e2f5fa;
+  background-color: #deeeeb;
 }
 
 .contactDetails {
@@ -53,15 +53,21 @@
   font-family: Roboto, sans-serif;
   font-size: 16px;
   line-height: 0.9;
-  color: rgb(255, 255, 255);
+  /* color: rgb(255, 255, 255); */
   padding: 6px;
   border-radius: 4px;
   cursor: pointer;
-  background-color: rgb(241, 57, 45);
+  /* background-color: rgb(241, 57, 45); */
+  border: 1px solid #566461;
+  background-color: #6d807c;
+  color: #ffffff;
+  box-shadow: 2px 3px 8px 2px rgba(0, 0, 0, 0.4);
+  transition: all 200ms ease-in-out;
 }
 
 .contactButton:hover {
-  background-color: rgb(204, 32, 19);
+  background-color: #abc7c1;
+  color: #333d3a;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 }

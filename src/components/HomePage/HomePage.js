@@ -10,22 +10,15 @@ const HomePage = () => {
       <div className={styles.homeDescriptionWrapper}>
         <h4 className={styles.titleDescription}>
           <span className={styles.titleDescriptionColor}>Phonebook</span> - це
-          сама крута приложуха на світі!!!
+          дуже крута приложуха (<span>😁</span>) !!!
         </h4>
         <p className={styles.homeText}>
-          Цей додаток робить ваше життя щасливим, ви lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Atque commodi dolores, repellendus quis
-          hic tempore impedit cumque neque consequuntur. Ullam, eligendi alias
-          reprehenderit autem deserunt ipsam magni beatae unde totam temporibus
-          assumenda vero quis suscipit nostrum harum delectus molestiae adipisci
-          ad consequatur enim nulla quos velit veniam expedita? Impedit modi
-          commodi repudiandae voluptates odit soluta architecto voluptatem,
-          quibusdam debitis perspiciatis ab nesciunt quae reiciendis aut sunt et
-          eum recusandae libero nostrum qui consequuntur similique aliquid!
+          Цей зручний додаток робить ваше життя комфортним. Ви можете зберігати
+          ваші контакти, перезаписувати їх, видаляти неактуальні.
         </p>
 
         <h4 className={styles.titleDescription}>
-          Приємних вражень від корисування нашим додатком{" "}
+          Приємних вражень від корисування додатком{" "}
           <span className={styles.titleDescriptionColor}>Phonebook</span>!!!
         </h4>
       </div>
