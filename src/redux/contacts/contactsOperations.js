@@ -9,7 +9,7 @@ axios.defaults.headers.post["Content-Type"] = "application/json";
  
 const addContact = ({ name, number }) => (dispatch) => {
   dispatch(contactsActions.addContactRequest());
-
+ 
   axios
     .post("/contacts", { name, number })
     .then(({ data }) => dispatch(contactsActions.addContactSuccess(data)))
@@ -24,7 +24,7 @@ const fetchContacts = () => (dispatch) => {
     .then(({ data }) => dispatch(contactsActions.fetchContactsSuccess(data)))
     .catch((error) => dispatch(contactsActions.fetchContactsError(error)));
 };
-
+ 
 const removeContact = (id) => (dispatch) => {
   dispatch(contactsActions.removeContactRequest());
   console.log(id);

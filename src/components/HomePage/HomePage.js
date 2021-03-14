@@ -13,7 +13,7 @@ const HomePage = () => {
           сама крута приложуха на світі!!!
         </h4>
         <p className={styles.homeText}>
-          Вона робить ваше життя щасливим, ви lorem ipsum dolor sit amet
+          Цей додаток робить ваше життя щасливим, ви lorem ipsum dolor sit amet
           consectetur adipisicing elit. Atque commodi dolores, repellendus quis
           hic tempore impedit cumque neque consequuntur. Ullam, eligendi alias
           reprehenderit autem deserunt ipsam magni beatae unde totam temporibus
