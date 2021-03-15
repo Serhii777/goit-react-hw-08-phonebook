@@ -7,15 +7,20 @@ const ContactListItem = ({ name, number, onRemoveContact }) => {
   return (
     <li className={styles.contactItem}>
       <div className={styles.contactDetails}>
-        <p className={styles.contactName}>{name}:</p>
-        <span className={styles.contactNumber}>{number}</span>
+        <div className={styles.contactDetailsWrapper}>
+          <p className={styles.contactName}>{name}:</p>
+          <div className={styles.contactNumberWrapper}>
+            <span className={styles.contactNumber}>{number}</span>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          className={styles.contactButton}
+          onClick={onRemoveContact}>
+          &#10006;
+        </button>
       </div>
-      <button
-        type="button"
-        className={styles.contactButton}
-        onClick={onRemoveContact}>
-        &#10006;
-      </button>
     </li>
   );
 };

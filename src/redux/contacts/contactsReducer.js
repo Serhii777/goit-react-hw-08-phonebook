@@ -17,10 +17,17 @@ const removeContact = (state, action) => {
   return state.filter(({ id }) => id !== action.payload);
 };
 
+const togglerCompleted = (state, action) => {
+  return state.map((contact) => {
+    return contact.id === action.payload.id ? action.payload : contact;
+  });
+};
+
 const contactList = createReducer(defaultContactList, {
   [contactsActions.fetchContactsSuccess]: (state, action) => action.payload,
   [contactsActions.addContactSuccess]: addContact,
   [contactsActions.removeContactSuccess]: removeContact,
+  [contactsActions.toggleCompletedSuccess]: togglerCompleted,
 });
 
 const resetContactUnique = (state, action) => {
@@ -52,6 +59,10 @@ const loading = createReducer(false, {
   [contactsActions.removeContactRequest]: () => true,
   [contactsActions.removeContactSuccess]: () => false,
   [contactsActions.removeContactError]: () => false,
+  
+  [contactsActions.toggleCompletedRequest]: () => true,
+  [contactsActions.toggleCompletedSuccess]: () => false,
+  [contactsActions.toggleCompletedError]: () => false,
 });
 
 export default combineReducers({

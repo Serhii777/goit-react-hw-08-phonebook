@@ -16,7 +16,9 @@ const changeFilter = createAction("contacts/changeFilter");
 const isNewContactUnique = createAction("contacts/newContactUnique");
 const resetNewContactUnique = createAction("contacts/resetNewContactUnique");
 
-
+const toggleCompletedRequest = createAction("contacts/toggleCompletedRequest");
+const toggleCompletedSuccess = createAction("contacts/toggleCompletedSuccess");
+const toggleCompletedError = createAction("contacts/toggleCompletedError");
 
 export default {
   addContactRequest,
@@ -31,4 +33,7 @@ export default {
   changeFilter,
   isNewContactUnique,
   resetNewContactUnique,
+  toggleCompletedRequest,
+  toggleCompletedSuccess,
+  toggleCompletedError,
 };

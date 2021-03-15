@@ -23,9 +23,6 @@
 
 .contactItem {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   margin: 0px 0px 12px 0px;
   box-shadow: 2px 2px 4px 2px rgba(32, 18, 18, 0.4);
   padding: 10px;
@@ -33,31 +30,45 @@
   background-color: #deeeeb;
 }
 
+.contactItem:hover {
+  background-color: #b4dfd7;
+}
+
 .contactDetails {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 86%;
+  width: 100%;
   font-weight: 400;
   margin-right: 20px;
+}
+
+.contactDetailsWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contactName {
   margin-right: 10px;
 }
 
-.contactNumber {
+.contactNumberWrapper {
+  min-width: 120px;
 }
+
+/* .contactNumber {
+} */
 
 .contactButton {
   font-family: Roboto, sans-serif;
   font-size: 16px;
   line-height: 0.9;
-  /* color: rgb(255, 255, 255); */
   padding: 6px;
+  max-height: 28px;
   border-radius: 4px;
   cursor: pointer;
-  /* background-color: rgb(241, 57, 45); */
   border: 1px solid #566461;
   background-color: #6d807c;
   color: #ffffff;
@@ -70,4 +81,16 @@
   color: #333d3a;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (min-width: 550px){
+  .contactDetailsWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 94%;
+  }
+}
+
+@media screen and (min-width: 1100px){
 }
