@@ -1,6 +1,11 @@
 import { createSelector } from "@reduxjs/toolkit";
 
-const getContacts = (state) => state.contacts.contactList;
+// const getContacts = (state) => state.contacts.contactList;
+const getContacts = (state) => {
+  const getContactsRevers = [...state.contacts.contactList];
+  return getContactsRevers.reverse();
+};
+
 const getFilter = (state) => state.contacts.filter;
 const getLoading = (state) => state.contacts.loading;
 

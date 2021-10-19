@@ -4,11 +4,7 @@ import contactsOperations from "../../redux/contacts/contactsOperations";
 import contactsSelectors from "../../redux/contacts/contactsSelectors";
 
 const mapStateToProps = (state, ownProps) => {
-console.log("stateListItemCont:", state);
-
   const contactListItem = contactsSelectors.getContactById(state, ownProps.id);
-
-console.log("contactListItem:", contactListItem);
 
   return {
     ...contactListItem,

@@ -1,7 +1,7 @@
 import axios from "axios";
 import contactsActions from "./contactsActions";
 
-axios.defaults.baseURL = "https://goit-phonebook-api.herokuapp.com/";
+axios.defaults.baseURL = "https://goit-phonebook-api.herokuapp.com";
 
 axios.defaults.headers.post["Content-Type"] = "application/json";
 

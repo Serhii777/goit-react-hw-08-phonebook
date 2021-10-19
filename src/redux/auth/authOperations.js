@@ -1,7 +1,7 @@
 import axios from "axios";
 import authActions from "./authActions";
 
-axios.defaults.baseURL = "https://goit-phonebook-api.herokuapp.com/";
+axios.defaults.baseURL = "https://goit-phonebook-api.herokuapp.com";
 
 const token = {
   set(token) {
@@ -14,11 +14,13 @@ const token = {
 
 const register = (credentials) => (dispatch) => {
   dispatch(authActions.registerRequest());
+console.log("credentials:", credentials);
+
 
   axios
     .post("/users/signup", credentials)
     .then((response) => {
-      console.log("responseRegister", response);
+      // console.log("responseRegister", response);
 
       token.set(response.data.token);
       dispatch(authActions.registerSuccess(response.data));

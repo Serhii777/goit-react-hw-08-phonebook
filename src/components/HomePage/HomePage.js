@@ -18,14 +18,14 @@ const HomePage = () => {
         </p>
 
         <h4 className={styles.titleDescription}>
-          Приємних вражень від корисування додатком{" "}
+          Приємних вражень від користування додатком{" "}
           <span className={styles.titleDescriptionColor}>Phonebook</span>!!!
         </h4>
       </div>
 
       <Link to="/register" className={styles.homeLink}>
         <button type="button" className={styles.homeButton}>
-          Start using our app
+          Start using the app
         </button>
       </Link>
     </div>

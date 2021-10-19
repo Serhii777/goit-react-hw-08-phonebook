@@ -7,8 +7,6 @@ import contactsSelectors from "../../redux/contacts/contactsSelectors";
 // });
 
 const mapStateToProps = (state) => {
-  console.log("stateListCont:", state);
-
   return {
     contacts: contactsSelectors.getVisibleContacts(state),
   };
